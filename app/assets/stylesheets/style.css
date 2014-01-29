@@ -1,0 +1,53 @@
+
+.tower {
+	background-color:lightgray;
+	width:200px;
+	height:400px;
+	border: 2px solid darkgray;
+	display: inline-block;
+	position: relative;
+}
+
+.disc {
+	height:100px;
+	position: absolute;
+	margin-left:auto;
+	margin-right:auto;
+	border-radius: 10px;
+}
+
+#main {
+	font-family:Helvetica,Verdana,Sans-serif;
+	padding: 10px;
+}
+
+#small {
+	background-color:yellow;
+	width:50px;
+	left: 75px;
+}
+
+
+#medium {
+	background-color:orange;
+	width:100px;
+	left: 50px;
+}
+
+#large {
+	left: 25px;
+	background-color:red;
+	width:150px;
+}
+
+.top {
+	bottom: 200px;
+}
+
+.middle {
+	bottom: 100px;
+}
+
+.bottom {
+	bottom: 0px;
+}
