@@ -12,7 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.all
 //= require_tree .
 //= require hanoi
 //= require hanoi_ui
+//= require bootstrap
+	

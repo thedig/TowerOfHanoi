@@ -9,7 +9,8 @@
 		$(".game").remove();
 
 		for(var i = 0; i < 3; i++) {
-			$('body').append("<div class='tower game' id='" + i + "'></div>");
+			$('#gameBoard').append("<div class='tower game ui-sortable' id='" + i + "'></div>");
+
 		}
 
 		var disc_ids = ["small", "medium", "large"];
@@ -24,6 +25,7 @@
 				$('#' + current_id).addClass(disc_heights[d_index]);
 			})
 		})
+
 		this.bindClicks();
 	};
 
@@ -32,19 +34,18 @@
 	};
 
 	TowersUI.prototype.handleTowerClicks = function(event) {
-		console.log("gets here");
 		if(this.game.startTowerIdx === null) {
 			this.game.startTowerIdx = event.currentTarget.id;
-			console.log(this.game.startTowerIdx)
+			$(event.currentTarget).addClass('highlight');
 		}
 		else {
-			console.log("fdslkafjdksfjas");
 			this.game.endTowerIdx = event.currentTarget.id;
 			this.game.move();
+			$(event.currentTarget).removeClass('highlight');
 			this.render();
 		}
 		if (this.game.isWon()) {
-			alert("You won!");
+			$('#win-modal').modal('show');
 			this.gameOverClicks();
 		}
 	};

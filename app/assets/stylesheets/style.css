@@ -8,6 +8,10 @@
 	position: relative;
 }
 
+.tower:hover {
+	background-color: darkgray;
+}
+
 .disc {
 	height:100px;
 	position: absolute;
@@ -16,9 +20,17 @@
 	border-radius: 10px;
 }
 
-#main {
+.disc:hover{
+	border: 2px solid white;
+}
+
+#gameBoard {
+	position: relative;
+}
+
+.row {
 	font-family:Helvetica,Verdana,Sans-serif;
-	padding: 10px;
+	padding: 20px;
 }
 
 #small {
@@ -50,4 +62,14 @@
 
 .bottom {
 	bottom: 0px;
+}
+
+.highlight {
+	border: 2px solid white;
+	background-color: lightblue;
+}
+
+.highlight:hover {
+	border: 2px solid darkgray;
+	background-color: lightblue;
 }
